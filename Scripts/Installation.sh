@@ -25,7 +25,7 @@ sleep 5
 #Maven Installation
 
 
-wget https://mirrors.estointernet.in/apache/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 
 tar -xvf apache-maven-3.9.6-bin.tar.gz
 
