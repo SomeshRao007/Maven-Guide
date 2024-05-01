@@ -41,23 +41,50 @@ Here the clean phase will be executed first, followed by the dependency:copy-dep
 clean:cleangoal deletes the output of a build by deleting the build directory. Thus, when mvn clean command executes, Maven deletes the build directory.
 
 
+## What is a Maven Repository?
+
+
+In Maven terminology, a repository is a directory where all the project jars, library jar, plugins or any other project specific artifacts are stored and can be used by Maven easily.
+
+
+- Maven local repository is a folder location on your machine. It gets created when you run any maven command for the first time.
+
+
+- Maven local repository keeps your project's all dependencies (library jars, plugin jars etc.). When you _run a Maven build, then Maven automatically downloads all the dependency jars into the local repository_. It helps to avoid references to dependencies stored on remote machine every time a project is build.
+
+
+- Maven central repository is repository provided by Maven community. It contains a large number of commonly used libraries. When Maven does not find any dependency in local repository, it starts searching in central repository using following URL − https://repo1.maven.org/maven2/. It is not required to be configured. It requires internet access to be searched.
+
+
+- Sometimes, _Maven does not find a mentioned dependency in central repository as well._ It then stops the build process and output error message to console. To prevent such situation, Maven provides concept of Remote Repository, which is developer's own custom repository containing required libraries or other project jars.
+
+
+**Search Sequence**
+
+1) Local repository
+2) Central repository
+3) Now, If a remote repository has not been mentioned, Maven simply stops the processing and throws error.
+4) If mentioned, then remote repository, if found then it is downloaded to local repository for future reference. Otherwise, Maven stops processing and throws error.
+
+
+## Plugins
+
+Maven is actually a plugin execution framework where every task is actually done by plugins.
+PLugins used for: 
+
+<li>
+create jar file
+create war file
+compile code files
+unit testing of code
+create project documentation
+create project reports 
+</li>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/SomeshRao007/Maven-Guide/assets/111784343/460fd546-611f-40d7-8915-17ec11319c6b)
 
 
 
