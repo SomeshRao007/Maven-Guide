@@ -72,16 +72,19 @@ In Maven terminology, a repository is a directory where all the project jars, li
 Maven is actually a plugin execution framework where every task is actually done by plugins.
 PLugins used for: 
 
-<li>
-create jar file
-create war file
-compile code files
-unit testing of code
-create project documentation
-create project reports 
-</li>
+- create jar file
+- create war file
+- compile code files
+- unit testing of code
+- create project documentation
+- create project reports 
+
+Basically 2 types: 
+
+1) **Build plugins** : They execute during the build process and should be configured in the <build/> element of pom.xml.
 
 
+2) **Reporting plugins** : They execute during the site generation process and they should be configured in the <reporting/> element of the pom.xml.
 
 
 ![image](https://github.com/SomeshRao007/Maven-Guide/assets/111784343/460fd546-611f-40d7-8915-17ec11319c6b)
